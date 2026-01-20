@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<style>
+body{font-family:Arial;margin:50px}
+label{display:block;margin-top:10px;font-weight:bold}
+input{width:250px;padding:6px;margin-top:5px}
+button{margin-top:15px;padding:6px 15px;cursor:pointer}
+#message{margin-top:20px;color:green;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>Login</h1>
+<form id="loginForm">
+<label>Username:</label>
+<input id="username" required>
+<label>Password:</label>
+<input type="password" id="password" required>
+<button>Login</button>
+</form>
+<div id="message"></div>
+<script>
+document.getElementById("loginForm").onsubmit=e=>{
+e.preventDefault();
+document.getElementById("message").innerText="Login Successful";
+};
+</script>
+</body>
+</html>
